@@ -38,7 +38,7 @@ os.system("python launch.py --share --opt-sdp-attention --ngrok test --no-downlo
 # Скачивание моделей
 models_folder = f"{fpath}models/Stable-diffusion"
 model_dl = f"wget -nv -t 10 --show-progress --progress=bar -q --content-disposition -P {models_folder}"
-os.system(f"{model_dl} -O koji_v21.safetensors https://huggingface.co/Magamanny/Koji/resolve/main/koji_v21.safetensors")
+os.system(f"{model_dl} https://huggingface.co/Magamanny/Koji/resolve/main/koji_v21.safetensors")
 # Создание папки лор
 loras_folder = f"{fpath}models/Lora"
 os.system(f"mkdir -p {loras_folder}")
