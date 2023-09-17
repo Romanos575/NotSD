@@ -28,6 +28,10 @@ os.system(f"git clone https://github.com/isl-org/MiDaS.git {fpath}repositories/m
 # Установка дополнений
 os.system(f"git clone https://github.com/thomasasfk/{sdwu1}-aspect-ratio-helper {fpath}extensions/{sdwu1}-aspect-ratio-helper")
 os.system(f"git clone https://github.com/DominikDoom/a1111-{sdwu1}-tagcomplete {fpath}extensions/tag-autocomplete")
+#Скачивание конфигов
+os.system(f"rm -f {fpath}config.json && rm -f {fpath}ui-config.json")
+os.system(f"wget https://raw.githubusercontent.com/Romanos575/NotSD/main/config.json -P {fpath}")
+os.system(f"wget https://raw.githubusercontent.com/Romanos575/NotSD/main/ui-config.json -P {fpath}")
 # Штатная установка зависимостей средствами launch.py
 os.chdir(fpath)
 os.system("python launch.py --share --opt-sdp-attention --ngrok test --no-download-sd-model --deepdanbooru --exit")
