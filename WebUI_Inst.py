@@ -35,10 +35,13 @@ os.system(f"wget https://raw.githubusercontent.com/Romanos575/NotSD/main/ui-conf
 # Штатная установка зависимостей средствами launch.py
 os.chdir(fpath)
 os.system("python launch.py --share --opt-sdp-attention --ngrok test --no-download-sd-model --deepdanbooru --exit")
-# Скачивание моделей
+# Скачивание моделей, эмбедов и т.д.
 models_folder = f"{fpath}models/Stable-diffusion"
+embeds_folder = f"{fpath}embeddings"
 model_dl = f"wget -nv -t 10 --show-progress --progress=bar -q --content-disposition -P {models_folder}"
 os.system(f"{model_dl} https://huggingface.co/Magamanny/Koji/resolve/main/koji_v21.safetensors")
+os.system(f"wget https://huggingface.co/embed/negative/resolve/main/bad-hands-5.pt -P {embeds_folder}")
+os.system(f"wget https://huggingface.co/datasets/gsdf/EasyNegative/resolve/main/EasyNegative.safetensors -P {embeds_folder}")
 # Создание папки лор
 loras_folder = f"{fpath}models/Lora"
 os.system(f"mkdir -p {loras_folder}")
