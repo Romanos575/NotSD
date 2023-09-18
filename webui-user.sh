@@ -10,7 +10,7 @@
 #clone_dir="stable-diffusion-webui"
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
-export COMMANDLINE_ARGS="--lora-dir --opt-sdp-attention --no-half-vae --disable-safe-unpickle --enable-insecure-extension-access --share --listen --disable-console-progressbars --no-hashing --theme dark"
+export COMMANDLINE_ARGS="--opt-sdp-attention --no-half-vae --disable-safe-unpickle --enable-insecure-extension-access --share --listen --disable-console-progressbars --no-hashing --theme dark"
 
 # python3 executable
 #python_cmd="python3"
